@@ -15,4 +15,4 @@ Open [http://localhost:3000]
 # npm package using
 
 # Description
-This is my first nextjs app practise using routing.
+This is my first nextjs app practice using routing.
