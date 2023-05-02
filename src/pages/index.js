@@ -1,6 +1,13 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Home(){
+    const router = useRouter();
+    const clickHandler = ()=>{
+        console.log("Placing your order");
+        router.push('/nestedpageblog');
+        // router.replace('/nestedpageblog');
+    }
     return (
         <div>
             <h1>
@@ -19,6 +26,15 @@ function Home(){
             </Link>
             <Link legacyBehavior href={'/catchalldocs/feature1'}>
                 <h1>Catch All Docs</h1>
+            </Link>
+            <button onClick={clickHandler}>
+                Placeholder
+            </button>
+            <Link legacyBehavior href={'/StaticGeneration'}>
+                <h1>Static Side Rendering</h1>
+            </Link>
+            <Link legacyBehavior href={'/SSR'}>
+                <h1>SSR</h1>
             </Link>
         </div>
     )
