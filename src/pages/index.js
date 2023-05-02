@@ -34,7 +34,7 @@ function Home(){
                 <h1>Static Side Rendering</h1>
             </Link>
             <Link legacyBehavior href={'/SSR'}>
-                <h1>SSR</h1>
+                <h1> SSR </h1>
             </Link>
         </div>
     )
