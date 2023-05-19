@@ -15,6 +15,9 @@ function index() {
             <Link legacyBehavior href={'/SSG/fallbackblocking'}>
                 <h1>Fallback blocking </h1>
             </Link>
+            <Link legacyBehavior href={'/SSG/product'}>
+                <h1>Product</h1>
+            </Link>
         </div>
     );
 }
