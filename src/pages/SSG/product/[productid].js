@@ -19,14 +19,14 @@ export async function getStaticPaths() {
     return {
         paths: [
             {
-                params: { productId: '1' }
+                params: { productid: '1' }
             },
-            {
-                params: { productId: '2' }
-            },
-            {
-                params: { productId: '3' }
-            },
+            // {
+            //     params: { productId: '2' }
+            // },
+            // {
+            //     params: { productId: '3' }
+            // },
         ],
         fallback: true,
 
@@ -36,16 +36,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const { params } = context
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.productId}`);
+    const response = await fetch(`http://localhost:4000/product/${params.productid}`);
     const data = await response.json();
-    if (!data.id) {
-        return {
-            notFound: true,
-        }
-    }
     return {
         props: {
-            post: data,
+            product: data,
         }
     }
 }

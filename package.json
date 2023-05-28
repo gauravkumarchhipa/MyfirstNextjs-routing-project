@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server-json": "json-server --watch db.json --post 4000"
+    "server-json": "json-server --watch db.json --port 4000"
   },
   "dependencies": {
     "@types/node": "18.15.11",
