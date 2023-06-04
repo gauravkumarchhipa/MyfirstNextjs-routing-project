@@ -36,6 +36,12 @@ function Home() {
             <Link legacyBehavior href={'/SSG'}>
                 <h1> SSG </h1>
             </Link>
+            <Link href={'/SSR'}>
+                <h1> SSR </h1>
+            </Link>
+            <Link href={'/clientside'}>
+                <h1> clientside </h1>
+            </Link>
         </div>
     )
 }

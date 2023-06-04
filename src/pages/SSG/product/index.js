@@ -20,13 +20,15 @@ function PostList({ product }) {
     );
 }
 export async function getStaticProps() {
+    console.log('Generating / regerating ProductList')
     const response = await fetch('http://localhost:4000/product');
     const data = await response.json();
     return {
         props: {
             // posts: data.slice(0, 3)
-            product: data
-        }
+            product: data,
+        },
+        revalidate: 10,
     }
 }
 
