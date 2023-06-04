@@ -42,6 +42,9 @@ function Home() {
             <Link href={'/clientside'}>
                 <h1> clientside </h1>
             </Link>
+            <Link href={'/apipractice'}>
+                <h1> API </h1>
+            </Link>
         </div>
     )
 }
