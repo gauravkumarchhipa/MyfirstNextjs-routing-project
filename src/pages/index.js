@@ -45,6 +45,9 @@ function Home() {
             <Link href={'/apipractice'}>
                 <h1> API </h1>
             </Link>
+            <Link href={'/styles'}>
+                <h1> Styles </h1>
+            </Link>
         </div>
     )
 }

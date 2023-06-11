@@ -16,7 +16,14 @@ const CommentsPage = () => {
             },
         })
         const data = await response.json()
-        console.log(data);
+    }
+    const deletecomment = async commnetId => {
+        const response = await fetch(`/api/postrequest/comments/${commnetId}`, {
+            method: 'DELETE',
+        })
+        const data = await response.json()
+        console.log(data)
+        fetchComments()
     }
     return (
         <div>
@@ -30,6 +37,7 @@ const CommentsPage = () => {
                     return (
                         <div key={data.id}>
                             {data.id} {data.text}
+                            <button onClick={() => deletecomment(data.id)}>Delete</button>
                         </div>
                     )
                 })
